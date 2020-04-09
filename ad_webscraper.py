@@ -20,7 +20,7 @@ chrm.find_element_by_id("amember-pass").send_keys(AD_PWD)
 chrm.find_element_by_id("remember_login").click()
 chrm.find_element_by_xpath('//*[@id="am-login-form"]/fieldset/div[4]/div/input').click()
 
-sleep(20)
+sleep(30)
 
 while True:
     download_url = f'https://member.assessmentday.com/member/content/f/id/{counter}/'
@@ -28,10 +28,13 @@ while True:
     counter+=1
     sleep(1)
 
+    if counter %% 100 == 0:
+        print(f'Step: {counter}')
+
     if counter == 489:
         print(f'End of Scrape.')
+        chrm.close()
         break
-
 
 
 
