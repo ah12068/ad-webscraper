@@ -18,4 +18,4 @@ AD_USER=username
 AD_PWD=password
 ```
 
-run ```ad_webscraper.py``` if any captcha happens solve it within 20 seconds.
+run ```ad_webscraper.py``` if any captcha happens solve it within 30 seconds.
